@@ -1,0 +1,36 @@
+cd /root
+
+
+
+sudo tee /root/rollsup.sh > /dev/null <<EOF
+#!/bin/bash
+#Версия 0.09
+cd /root/massa/massa-client
+#Set variables
+candidat=\$(./massa-client wallet_info |grep 'Candidate rolls'|awk '{print \$3}')
+massa_wallet_address=\$(./massa-client wallet_info |grep 'Address'|awk '{print \$2}')
+tmp_final_balans=\$(./massa-client wallet_info |grep 'Final balance'|awk '{print \$3}')
+final_balans=\${tmp_final_balans%%.*}
+averagetmp=\$(/usr/bin/cat /proc/loadavg | awk '{print \$1}')
+node=\$(./massa-client get_status |grep 'Error'|awk '{print \$1}')
+if [ -z "\$node" ]&&[ -z "\$candidat" ];then
+echo \`/bin/date +"%b %d %H:%M"\` "(rollsup) Node is currently offline" >> /root/rolls.log
+elif [ \$candidat -gt "0" ];then
+echo "Ok" > /dev/null
+elif [ \$final_balans -gt "99" ]; then
+echo \`/bin/date +"%b %d %H:%M"\` "(rollsup) The roll flew off, we check the number of coins and try to buy" >> /root/rolls.log
+resp=\$(./massa-client buy_rolls \$massa_wallet_address 1 0)
+else
+echo \`/bin/date +"%b %d %H:%M"\` "(rollsup) Not enough coins to buy a roll from you \$final_balans, minimum 100" >> /root/rolls.log
+fi
+EOF
+
+
+Добавляем задание демону cron  на выполнение файла rollsup.sh каждые три минуты
+Будем использовать локальный демон. Задание будет находиться в файле massarolls и располагаться в папке /etc/cron.d/
+(Блок ниже нужно скопировать и вставить сразу весь, в командной строке, не построчно.)
+
+printf "SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/3 * * * * root /bin/bash /root/rollsup.sh > /dev/null 2>&1
+" > /etc/cron.d/massarolls
