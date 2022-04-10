@@ -1,0 +1,31 @@
+
+
+    To run a client: massa_client
+
+    To view the node status: sudo systemctl status massad
+
+    To view the node log: massa_log
+
+    To restart the node: sudo systemctl restart massad
+
+    sudo systemctl stop massad
+
+    CLI client commands (use massa_cli_client -h to view the help page):
+
+    massa_buy_rolls
+
+    massa_cli_client
+
+    massa_client
+
+    massa_node_info
+
+    massa_wallet_info
+
+У кого ошибка с бутстрапом нашёл в дискорд следующее , мне помогло Останавливаем ноду командой: sudo systemctl stop massad Прописываем: cd ~ && wget -O add-bootstrap-nodes.sh https://raw.githubusercontent.com/Harteroider/massa-bootstrap-hotfix/master/add-bootstrap-nodes.sh && chmod +x add-bootstrap-nodes.sh && ./add-bootstrap-nodes.sh Перезапускаем: sudo systemctl restart massad
+
+node_testnet_rewards_program_ownership_proof 2rLiVo5oUjpkgRV5sQ3w3u1RB58TLdN94SYztjDL8WttKzNDGW
+
+897268282988568576
+
+72Pyqb84wTcYgvoLgp6sXZobKDcyc7T73bYWM39vnbxstpHY8C/FRWsjNaTFF6CFHSJub9Ups14cibtQ8fYVnXDJ6hsgcWRkEWqwKPh7FUST7CEBoBG8ACWKufncxSmHdG5HFTMUGL6ecpXw/65rvYvrRsjkZo4ECzPAL82SW6sHNFQhvZtiMUu6Dkv5av8yAou/KwsCV3Ek12RYq7eK7t46ES8JNHowt53XNvNxk5kCXQmxfysE7pExharg9yj3BWCPFHi61HyKd8Je2Rr6tUBxiDAXLPeWr
