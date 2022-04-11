@@ -1,0 +1,48 @@
+ARCHWAY_CHAIN="torii-1"
+ARCHWAY_MONIKER="VladArchway1969" # come up with your validator name
+ARCHWAY_WALLET="VLAD_WALLET" 
+
+name: VladWallet
+  type: local
+  address: archway12h284nv0xw8khxnlvepj60y9awgxna805mvvld
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Ax3b0w932by6IxKueyBvcMkFtm/kQAd2nwrUiYsFZ+tq"}'
+  mnemonic: ""
+
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+fall involve toward rather book ancient churn voice plunge priority frost accuse seed swift wedding cherry battle ridge tragic casino tuition early nerve put
+
+
+wget -O $HOME/.archway/config/genesis.json "https://github.com/archway-network/testnets/blob/main/torii-1/penultimate_genesis.json"
+
+
+
+archwayd add-genesis-account $(archwayd keys show $ARCHWAY_WALLET -a --home $HOMEDIR)  1000000000utorii --home $HOMEDIR
+cp penultimate_genesis.json $HOME/config/genesis.json
+
+
+archwayd gentx my-key 1000000000utorii \
+  --commission-rate 0.1 \
+  --commission-max-rate 0.1 \
+  --commission-max-change-rate 0.1 \
+  --pubkey $(archwayd tendermint show-validator --home $HOMEDIR) \
+  --chain-id torii-1
+  
+  archwayd gentx $ARCHWAY_WALLET 1000000000utorii \
+  --commission-rate=0.1 \
+  --commission-max-rate=0.1 \
+  --commission-max-change-rate=0.1 \
+  --pubkey $(archwayd tendermint show-validator --home $HOME) \
+  --chain-id=torii-1 
+  
+ 
+  archwayd gentx archway122xr70a4sw5aedxna5ndn38ygrsn8d3r96ctf2 1000000utorii \
+  --commission-rate=0.1 \
+  --commission-max-rate=0.1 \
+  --commission-max-change-rate=0.1 \
+  --pubkey $(archwayd tendermint show-validator) \
+  --chain-id=torii-1 \
+  --moniker="VladArchway1969"
+  
