@@ -45,4 +45,15 @@ archwayd gentx my-key 1000000000utorii \
   --pubkey $(archwayd tendermint show-validator) \
   --chain-id=torii-1 \
   --moniker="VladArchway1969"
-  
+---------------------------------------------------------------------------------------  
+ {
+  "id": {
+    "full_legal_name": "Vladimiras Levinas",
+    "github_handle": "vladlevinas",
+    "email_address": "vladimir@dbits.lt",
+    "account_address": "archway12h284nv0xw8khxnlvepj60y9awgxna805mvvld",
+    "pub_key": "61rphyEDHdvTD3fZvLojEq57IG9wyQW2b+RAB3afCtSJiwVn62o="
+  },
+  "signature": "4H5T58u92B2CC2m3I8eF1nKzplhPmCgZGp/TGGALuIZnJPNprIbre0j4rLZLtKb1PPyHowxINix/Ki8Q/t4acA=="
+}
+------------------------------------------------------------------------------------------------------------
