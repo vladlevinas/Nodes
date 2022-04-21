@@ -1,0 +1,8 @@
+cd $HOME && \
+wget https://github.com/KYVENetwork/evm/releases/download/v1.0.3/evm-linux.zip && \
+unzip evm-linux.zip && \
+rm evm-linux.zip && \
+mv evm-linux /usr/bin/kyve
+
+
+MNEMONIC="adapt future veteran tent brand bridge galaxy work page pyramid quit flee width spoil whip weapon rose measure final retreat enemy debate catalog powder"
