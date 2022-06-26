@@ -1,0 +1,74 @@
+
+
+quicksilverd tx distribution withdraw-all-rewards --from=quick125cpd26rzufstfx0cdwxew8whspzpv5tekhd0s  --commission --chain-id=killerqueen-1  --gas=auto
+quicksilverd tx distribution withdraw-rewards quickvaloper125cpd26rzufstfx0cdwxew8whspzpv5t8meqpe --from=quick125cpd26rzufstfx0cdwxew8whspzpv5tekhd0s --commission --chain-id=killerqueen-1
+quicksilverd tx staking redelegate quickvaloper125cpd26rzufstfx0cdwxew8whspzpv5t8meqpe quickvaloper1dqk58ewh84lr6mdf9227eqz3wdn296kqra3zm7 100000uqck --from=quick125cpd26rzufstfx0cdwxew8whspzpv5tekhd0s --chain-id=killerqueen-1 --gas=auto
+
+quicksilverd tx staking unbond quickvaloper125cpd26rzufstfx0cdwxew8whspzpv5t8meqpe quick125cpd26rzufstfx0cdwxew8whspzpv5tekhd0s 100000uqck --chain-id=killerqueen-1  --gas=auto
+
+
+quicksilverd tx slashing unjail \
+  --broadcast-mode=block \
+  --from=quick125cpd26rzufstfx0cdwxew8whspzpv5tekhd0s \
+  --chain-id=killerqueen-1 \
+  --gas=auto
+  
+  
+  $request  quick1ky82nl2wphxgapkhdmkg7e86llptx80xl69egq  killerqueen
+  
+  quicksilverd tx bank send quick1ky82nl2wphxgapkhdmkg7e86llptx80xl69egq quick125cpd26rzufstfx0cdwxew8whspzpv5tekhd0s 5000000000uqck
+  
+  
+  quicksilverd tx staking delegate quickvaloper125cpd26rzufstfx0cdwxew8whspzpv5t8meqpe 5000000000uqck --from=quick125cpd26rzufstfx0cdwxew8whspzpv5tekhd0s --chain-id=killerqueen-1  --gas=auto
+  
+  
+ 
+
+icad tx staking create-validator \
+  --amount=24900000uatom \
+  --from=cosmos125cpd26rzufstfx0cdwxew8whspzpv5tjj8lkz \
+  --keyring-backend=test  \
+  --moniker=VladSilver   \
+  --chain-id=kqcosmos-1   \
+  --commission-rate=0.059   \
+  --commission-max-rate=1.0   \
+  --commission-max-change-rate=0.1   \
+  --min-self-delegation=1   \
+  --pubkey=$(icad tendermint show-validator)
+  
+  cosmosvaloper125cpd26rzufstfx0cdwxew8whspzpv5thxn263
+  
+  transfer========================================================================
+  
+  icad tx ibc-transfer -y \
+  transfer \
+  transfer \
+  channel-0 \
+  quick125cpd26rzufstfx0cdwxew8whspzpv5tekhd0s \
+  100uatom \
+  --chain-id kqcosmos-1 \
+  --from cosmos15pl4hcfsjjl5xnd2azyl9vkyu57nsn5smjcrpk
+  
+  
+  
+  quicksilverd tx ibc-transfer -y \
+  transfer \
+  transfer \
+  channel-0 \
+  cosmos125cpd26rzufstfx0cdwxew8whspzpv5tjj8lkz \
+  1uqck \
+  --chain-id killerqueen-1 \
+  --from quick125cpd26rzufstfx0cdwxew8whspzpv5tekhd0s
+  
+  ===========================================================================================================================
+  
+  
+  
+  
+  
+  
+  icad tx bank send cosmos15pl4hcfsjjl5xnd2azyl9vkyu57nsn5smjcrpk cosmos125cpd26rzufstfx0cdwxew8whspzpv5tjj8lkz 24900000uatom --chain-id=kqcosmos-1  --gas=auto
+  icad tx staking delegate cosmosvaloper125cpd26rzufstfx0cdwxew8whspzpv5thxn263 24900000uatom --from=cosmos125cpd26rzufstfx0cdwxew8whspzpv5tjj8lkz --chain-id=kqcosmos-1  --gas=auto
+ icad tx bank send cosmos125cpd26rzufstfx0cdwxew8whspzpv5tjj8lkz cosmos15pl4hcfsjjl5xnd2azyl9vkyu57nsn5smjcrpk 24800000uatom --chain-id=kqcosmos-1  --gas=auto
+  
+  
