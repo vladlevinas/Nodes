@@ -1,6 +1,9 @@
+#open import in Grafana and put https://github.com/vladlevinas/Nodes/blob/main/purple.json
 # Open and edit your prometheus.yml in "/root/charon-distributed-validator-node/prometheus/"
+docker compose down
+docker compose up
 
-#MY EXAMPLE
+#MY EXAMPLE of prometheus.yml
 -------------------------------------------------------------------------------------------------------------------------------------------------
 global:
   scrape_interval:     12s # Set the scrape interval to every 12 seconds. Default is every 1 minute.
