@@ -1,10 +1,10 @@
-#######################################
-# Thank for CYBEROMANOV for template
-#######################################
+#################################################################################################################################
+# Thanks for CYBEROMANOV for template / see nice manual about Prometheus/Grafana in Russian https://cyberomanov.tech/grafana#tN9U
+#################################################################################################################################
 
 # you can make new dashboard in any you nodes 
 
-# Open and edit your prometheus.yml in "/root/charon-distributed-validator-node/prometheus/" see example 
+# Open and edit your prometheus.yml in "/root/charon-distributed-validator-node/prometheus/" -see example below
 docker compose down
 docker compose up
 # go to you Grafana http://YOUIP:3000/dashboard/import
