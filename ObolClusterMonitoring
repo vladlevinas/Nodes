@@ -37,7 +37,7 @@ scrape_configs:
     static_configs:
       - targets: ['node-exporter:9100']
         labels: 
-          label: 'MaterNode'
+          label: 'MasterNode'
       - targets: ['95.111.229.221:9100']
         labels:
           label: 'BootNode'
