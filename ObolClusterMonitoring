@@ -8,7 +8,7 @@
 docker compose down
 docker compose up
 # go to you Grafana http://YOUIP:3000/dashboard/import
-# Upload json file from- https://github.com/vladlevinas/Nodes/blob/main/purple.json
+# Upload json dashboard template file from- https://github.com/vladlevinas/Nodes/blob/main/purple.json
 
 
 #MY EXAMPLE of prometheus.yml
