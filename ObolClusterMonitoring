@@ -1,3 +1,6 @@
+# Thank for Gyperomanov for template
+
+
 # you can make new dashboard in any you nodes 
 # go to you Grafana http://YOUIP:3000/dashboard/import
 # Upload json file from- https://github.com/vladlevinas/Nodes/blob/main/purple.json
