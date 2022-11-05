@@ -9,12 +9,13 @@ chmod +x defund_auto_restake.sh
     DELAY=3600 #in secs — how often restart the script ;
     ACC_NAME=YourWalleName
 
-nano restakingOmniFLix.sh
+nano defund_auto_restake.sh
+
 
 6. Open the screen or tmux session:
 
 sudo apt install screen
-screen -S scriptOmniFLix
+screen -S scriptDefund
 
 7. Run auto claiming and delegating rewards:
 
