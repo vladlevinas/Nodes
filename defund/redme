@@ -1,6 +1,6 @@
 Give the permissions to this file:
 
-chmod +x restakingOmniFLix.sh
+chmod +x defund_auto_restake.sh
 
     Edit this script with your credentials -> change these parameters: DELEGATOR=’Your delegator address’ ;
     VALIDATOR=’Your validator address’ ;
@@ -17,5 +17,5 @@ screen -S scriptOmniFLix
 
 7. Run auto claiming and delegating rewards:
 
-bash restakingOmniFLix.sh
+bash defund_auto_restake.sh
 
