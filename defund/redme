@@ -2,7 +2,8 @@ Give the permissions to this file:
 
 chmod +x defund_auto_restake.sh
 
-    Edit this script with your credentials -> change these parameters: DELEGATOR=’Your delegator address’ ;
+    Edit this script with your credentials -> change these parameters: 
+    DELEGATOR=’Your delegator address’ ;
     VALIDATOR=’Your validator address’ ;
     PASWD=’pass phrase from cli’ ;
     DELAY=3600 #in secs — how often restart the script ;
